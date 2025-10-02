@@ -1,0 +1,257 @@
+<!-- 声明文档类型为 HTML5 文档 -->
+<!DOCTYPE html>
+<!-- 声明文档语言为中文 -->
+<html lang="zh-CN">
+
+<head>
+    <!-- 网页使用 UTF-8 编码 -->
+    <meta charset="UTF-8">
+    <!-- 网页标题 -->
+    <title>叮叮书店</title>
+    <!-- 让网页宽度与设备宽度保持一致并设置初始缩放比例为 0 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 提供给搜索引擎的搜索关键字 -->
+    <meta name="keywords" content="书店, 叮叮书店, 图书">
+    <!-- 提供给搜素引擎的网页描述 -->
+    <meta name="description" content="叮叮书店是一个销售书籍的网上书店。">
+    <!-- 搜索引擎选项,允许搜索引擎索引并允许搜索引擎对页面上的链接递归索引 -->
+    <meta name="robots" content="index, follow">
+</head>
+
+<body>
+    <!-- 页眉 -->
+    <header class="container">
+        <div id="logo">
+            <ul>
+                <li>首页</li>
+                <li>书籍分类</li>
+                <li>特刊降价</li>
+                <li>联系我们</li>
+                <li>关于我们</li>
+            </ul>
+        </div>
+        <div id="search"></div>
+    </header>
+
+    <!-- 导航菜单 -->
+    <div id="nav">
+        <div id="cart"></div>
+    </div>
+
+    <!-- 内容 -->
+    <div id="content-wrapper" class="container">
+        <!--左边内容区-->
+        <main>
+            <!-- 横幅广告 -->
+            <div id="adv"></div>
+            <!-- 本周推荐 -->
+            <section id="recommend-book">
+                <section class="recommend-book">
+                    <h2>本周推荐</h2>
+                    <h3>《HTML5 权威指南》</h3>
+                    <div class="content">
+                        <div class="cover"></div>
+                        <div class="description">
+                            <p>
+                                作为下一代Web 标准<mark>HTML5</mark>致力于为互联网开发者搭建更加便捷、
+                                开放的沟通平台。业界普遍认为,在未来几年内,<mark>HTML5</mark>无疑将成为移
+                                动互联网领域的主宰者。本书是系统学习网页设计和移动设计的参考图书。
+                            </p>
+                            <p>
+                                Adam Freeman,曾在多家名企担任高级职务,现为畅销技术图书作家,著有多部
+                                C#、.NET 和 Java 方面的大部头作品。其中 《ASP.NET4 高级程序设计(第4版)》、《精
+                                通ASP.NET MVC3框架(第3版)》销量均在同品种中名列前茅,备受读者推崇。Freeman
+                                专门为网页开发新手和网页设计师打造的经典参考书,这本书秉承作者的一贯风格,幽默
+                                风趣、简约凝练、逻辑性强,是广大 Web 开发人员的必读经典。
+                            </p>
+                        </div>
+                        <div></div>
+                    </div>
+                </section>
+                <section class="recommend-book">
+                    <h3>《JavaScript 权威指南》</h3>
+                    <div class="content">
+                        <div class="cover"></div>
+                        <div class="description">
+                            <p>
+                                经典的 Javascript 工具书, 从1996年以来,本书已经成为 Javaseript 程序员心中的《圣经》。
+                            </p>
+                            <p>
+                                David Flanagan,是一名程序员,也是一名作家。他在o'Rei11y 出版的其他畅
+                                销书还包括 JavaScript Pocket Reference, The Ruby Programming Language
+                                以及 Java in a Nutshe21. David 毕业于麻省理工学院,获得计算机科学与工程学位。
+                                他和妻子、孩子一起生活在西雅图和温哥华之间的美国太平洋西北海岸。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cart-more">加入购物车详细内容</div>
+                </section>
+            </section>
+            <!-- 最近新书 -->
+            <section id="new">
+                <h2>最近新书</h2>
+                <div class="content">
+                    <section class="book">
+                        <h3>《HTML5+CSS3 从入门到精通》</h3>
+                        <div class="effect-1">
+                            <div class="image-box">
+                                <div class="text-desc">
+                                    <h3> 《HTML5+CSS3 从入门到精通》</h3>
+                                    <p>
+                                        《<mark>HTML5</mark>+CSS3 从入门到精通》通过基础知识+中小实例＋综合
+                                        案例的方式,讲述了用<mark>HTML5</mark>+CSS3设计构建网站的必备知识,相
+                                        对于权威指南、高级程序设计、开发指南同类图书,本书是一本适合快速入手的自学
+                                        教程。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="cart-more">加入购物车详细内容</div>
+                        </div>
+                    </section>
+                    <section class="book">
+                        <h3>《响应式 Web 设计》</h3>
+                        <div class="effect-1">
+                            <div class="image-box"></div>
+                            <div class="text-desc">
+                                <h3>《响应式 web 设计》</h3>
+                                <p>
+                                    《响应式Web设计:<mark>HTML5</mark>和 CsS3 实战》将当前 web 设计中热门
+                                    的响应式设计技术与<mark>HTML5</mark>和 csS3 结合起来,为读者全面深入地讲解
+                                    了针对各种屏幕大小设计和开发现代网站的各种技术。《响应式 Web设计:<mark>HTML5
+                                    </mark>和CSS3 实战》适合各个次的web开发和设计人员阅读。
+                                </p>
+                                <div class="cart-more">加入购物车详细内容</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <!-- 最近促销 -->
+            <section id="sales">
+                <h2></h2>
+                <div class="content">
+                    <section class="book">
+                        <h3>《HTML5 和 CSS3 实例教程》</h3>
+                        <div class="effect-1">
+                            <div class="image-box"></div>
+                            <div class="text-desc"></div>
+                            <div class="cart-more">加入购物车详细内容</div>
+                        </div>
+                    </section>
+                    <section class="book">
+                        <h3>《JavaScript 权威指南》</h3>
+                        <div class="effect-1">
+                            <div class="image-box"></div>
+                            <div class="text-desc"></div>
+                            <div class="cart-more">加入购物车详细内容</div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+        <aside>
+            <!-- 边栏广告 -->
+            <div id="advert"></div>
+            <!-- 畅销图书 -->
+            <section id="best-selling">
+                <h2>畅销图书</h2>
+                <ul>
+                    <li>深度学习 [deep 1earning]
+                        <div class="curr">
+                            <div class="p-img"></div>
+                            <div class="p-name"> 深度学习[deep learning]<strong>¥43.50
+                                </strong><del>¥52.00</del></div>
+                        </div>
+                    </li>
+                    <li>Hadoop 权威指南:大数据的存储与分析(第4版),累计销量超过10万册
+                        <div class="curr">
+                            <div class="p-img">
+                            </div>
+                            <div class="p-name">Hadoop 权威指南:大数据的存储与分析(第4版),累计销量超过10万册
+                                <strong>¥43.50</strong>
+                                <del>¥52.00</del>
+                            </div>
+                        </div>
+                    </li>
+                    <li>和秋叶一起学 PPT 第3版
+                        <div class="curr">
+                            <div class="p-img"></div>
+                            <div class="p-name">和秋叶一起学PPT 第3版<strong>¥43.50</strong>
+                                <del>¥52.00</del>/div>
+                            </div>
+                    </li>
+                    <li>深度学习优化与识别
+                        <div class="curr">
+                            <div class="p-img"></div>
+                            <div class="p-name">深度学习优化与识別<strong>¥43.50</strong>
+                                <del>·52.00</del>/ div>
+                            </div>
+                    </li>
+                    <li>区块链原理、设计与应用
+                        <div class="curr">
+                            <div class="p-img"></div>
+                            <div class="p-name">区块链原理、设计与应用<strong>¥43.50</strong>
+                                <del>·52.00</del>/div>
+                            </div>
+                    </li>
+                </ul>
+            </section>
+            <div id="classify-partner">
+                <!-- 图书分类 -->
+                <section id="classify">
+                    <h2>图书分类</h2>
+                    <ul>
+                        <li>编程语言</li>
+                        <li>数据库</li>
+                        <li>图形图像</li>
+                        <li>网页制作</li>
+                        <li>考试认证</li>
+                    </ul>
+                </section>
+                <!-- 合作伙伴 -->
+                <section id="partner">
+                    <h2>合作伙伴</h2>
+                    <ul>
+                        <li>中国电子商务研究中心</li>
+                        <li>清华大学出版社</li>
+                        <li>中国人民大学出版社</li>
+                        <li>中国社会科学出版社</li>
+                    </ul>
+                </section>
+            </div>
+            <!-- 关于书店 -->
+            <section id="about">
+                <h2>关于书店</h2>
+                <p>
+                    叮叮书店成立于2010年6月, 是由教育部主管、清华大学主办的综合出版单位, 植根于“清
+                    华”这座久负盛名的高等学府，秉承清华人“自强不息，厚德载物”的人文精神。
+                </p>
+                <ul>
+                    <li>首页</li>
+                    <li>关于我们</li>
+                    <li>服务条款</li>
+                    <li>隐私策略</li>
+                    <li>联系我们</li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <!-- 页脚 -->
+    <div id="footer-wrapper">
+        <footer class="container"></footer>
+    </div>
+
+    <!-- 版权信息 -->
+    <div id="copyright" class="container">
+        <div>
+            Copyright (C)叮叮书店 2016-2018,A11 Rights Reserved | 京 ICP 证 000001
+            号音像制品经营许可证
+        </div>
+        <address>
+            通讯地址：清华大学学研大厦 A 座 读者服务部&nbsp;&nbsp;电话：(010)
+            62781733&nbsp;&nbsp;网管信箱: netadmin@tup.tsinghua.edu.cn
+        </address>
+    </div>
+</body>
+</html>
