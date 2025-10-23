@@ -1,0 +1,179 @@
+<!-- 外层包裹容器，使整个太极图在页面中居中显示 -->
+<div class="universe-wrap">
+    <!-- 太极主体容器 -->
+    <div class="universe">
+        <!-- 太极左半部分（白） -->
+        <div></div>
+        <!-- 太极右半部分（黑） -->
+        <div></div>
+    </div>
+</div>
+
+<style>
+    /* 去除 body 和 html 的默认边距与内边距 */
+    body,
+    html {
+        /* 内边距为 0 */
+        padding: 0;
+        /* 外边距为 0 */
+        margin: 0;
+    }
+
+    /* 让 body 和 html 占满整个浏览器窗口 */
+    body,
+    html {
+        /* 宽度 100% */
+        width: 100%;
+        /* 高度 100% */
+        height: 100%;
+    }
+
+    /* 最外层容器，控制整体布局 */
+    .universe-wrap {
+        /* 宽度充满页面 */
+        width: 100%;
+        /* 高度充满页面 */
+        height: 100%;
+        /* 启用 flex 布局 */
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        /* 垂直居中 */
+        align-items: center;
+        /* 水平居中 */
+        justify-content: center;
+        /* 背景灰色 */
+        background: #555555;
+    }
+
+    /* 定义旋转动画 */
+    @keyframes UniverseR {
+
+        /* 起始角度 0° */
+        0% {
+            transform: rotate(0deg);
+        }
+
+        /* 结束角度 360° */
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* 太极图主体 */
+    .universe {
+        /* 相对定位，为内部绝对定位提供参考 */
+        position: relative;
+        /* 太极宽度 */
+        width: 300px;
+        /* 太极高度 */
+        height: 300px;
+        /* 外边框 */
+        border: 1px solid #e5e5e5;
+        /* 超出部分隐藏 */
+        overflow: hidden;
+        /* 设置旋转动画*/
+        animation: UniverseR 5s linear infinite;
+    }
+
+    /* 太极整体与伪元素圆角化 */
+    .universe,
+    .universe>div:before,
+    .universe>div:after {
+        /* 标准圆角 */
+        border-radius: 100%;
+    }
+
+    /* 太极左右两半的基础样式 */
+    .universe>div {
+        /* 绝对定位 */
+        position: absolute;
+        /* 顶部对齐 */
+        top: 0;
+        /* 各占一半宽度 */
+        width: 50%;
+        /* 高度占满 */
+        height: 100%;
+        /* 使用当前文字颜色作为背景色 */
+        background: currentcolor;
+    }
+
+    /* 左半部分（白色） */
+    .universe>div:first-of-type {
+        /* 贴左边 */
+        left: 0;
+        /* 当前颜色为白色 */
+        color: #FFFFFF;
+    }
+
+    /* 右半部分（黑色） */
+    .universe>div:last-of-type {
+        /* 贴右边 */
+        right: 0;
+        /* 当前颜色为黑色 */
+        color: #000000;
+    }
+
+    /* 伪元素的公共属性 */
+    .universe>div:before,
+    .universe>div:after {
+        /* 绝对定位 */
+        position: absolute;
+        /* 生成空内容 */
+        content: '';
+        /* 使用当前颜色 */
+        background: currentcolor;
+    }
+
+    /* “鱼头”部分的通用样式 */
+    .universe>div:before {
+        /* 宽度为父元素的 100% */
+        width: 100%;
+        /* 高度为父元素的一半 */
+        height: 50%;
+        /* 层级底部 */
+        z-index: 1;
+    }
+
+    /* 白色部分的鱼头 */
+    .universe>div:first-of-type::before {
+        /* 顶部对齐 */
+        top: 0;
+        /* 向右偏移半宽 */
+        left: 50%;
+    }
+
+    /* 黑色部分的鱼头 */
+    .universe>div:last-of-type::before {
+        /* 底部对齐 */
+        bottom: 0;
+        /* 向左偏移半宽 */
+        right: 50%;
+    }
+
+    /* “鱼眼”部分的通用样式 */
+    .universe>div:after {
+        /* 宽度为父元素的 25% */
+        width: 25%;
+        /* 高度为父元素的 12.5% */
+        height: 12.5%;
+        /* 层级最高 */
+        z-index: 2;
+    }
+
+    /* 白色部分的鱼眼（黑点） */
+    .universe>div:first-of-type::after {
+        /* 距底部 18.75% */
+        bottom: 18.75%;
+        /* 向右偏移超出 12.5% */
+        right: -12.5%;
+    }
+
+    /* 黑色部分的鱼眼（白点） */
+    .universe>div:last-of-type::after {
+        /* 距顶部 18.75% */
+        top: 18.75%;
+        /* 向左偏移超出 12.5% */
+        left: -12.5%;
+    }
+</style>
