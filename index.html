@@ -16,9 +16,13 @@
     <meta name="description" content="叮叮书店是一个销售书籍的网上书店。">
     <!-- 搜索引擎选项,允许搜索引擎索引并允许搜索引擎对页面上的链接递归索引 -->
     <meta name="robots" content="index, follow">
+    <!-- 引入外部 CSS 文件 -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- 引入外部脚本文件 -->
+    <script src="script.js"></script>
     <!-- 页眉 -->
     <header class="container">
         <ul>
@@ -306,66 +310,4 @@
         </address>
     </div>
 </body>
-<!-- 轮播图样式 -->
-<style>
-.slideshow-container {
-    position: relative;
-    width: 60%;
-    margin: 20px auto;
-    aspect-ratio: 16 / 9;  /* 保持图片比例 */
-    overflow: hidden;
-    border-radius: 10px;
-}
-.slides {
-    display: none;
-    width: 100%;
-    height: 100%;
-}
-.slides img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.dot-container {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
-.active {
-    background-color: #717171;
-}
-</style>
-
-<script>
-let slideIndex = 0, slideTimer = null;
-
-function showSlides() {
-    const slides = document.getElementsByClassName("slides");
-    const dots = document.getElementsByClassName("dot");
-    for (let s of slides) s.style.display = "none";
-    slideIndex = (slideIndex + 1 > slides.length) ? 1 : slideIndex + 1;
-    for (let d of dots) d.classList.remove("active");
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].classList.add("active");
-    clearTimeout(slideTimer);
-    slideTimer = setTimeout(showSlides, 3000);
-}
-
-function currentSlide(n) {
-    slideIndex = n - 1;
-    showSlides();
-}
-
-window.addEventListener("load", showSlides);
-</script>
 </html>
