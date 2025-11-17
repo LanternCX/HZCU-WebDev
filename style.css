@@ -1,27 +1,33 @@
+/* 横幅广告 */
 .slideshow-container {
     position: relative;
     width: 60%;
     margin: 20px auto;
-    aspect-ratio: 16 / 9;  /* 保持图片比例 */
+    aspect-ratio: 16 / 9;
+    /* 保持图片比例 */
     overflow: hidden;
     border-radius: 10px;
 }
+
 .slides {
     display: none;
     width: 100%;
     height: 100%;
 }
+
 .slides img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .dot-container {
     position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
+
 .dot {
     height: 10px;
     width: 10px;
@@ -31,6 +37,7 @@
     display: inline-block;
     cursor: pointer;
 }
+
 .active {
     background-color: #717171;
 }
@@ -55,7 +62,9 @@ img {
 }
 
 @media screen and (min-width: 420px) {
-    .container{width: 80%;}
+    .container {
+        width: 80%;
+    }
 }
 
 /* 整体布局 */
@@ -78,7 +87,9 @@ aside {
 
 /* 局部布局 */
 
-.recommend-book .content, #new .content, #sales .content {
+.recommend-book .content,
+#new .content,
+#sales .content {
     display: flex;
     flex-flow: row wrap;
 }
@@ -116,7 +127,8 @@ aside {
     flex: 1;
 }
 
-.effect-1 .image-box, .cart-more {
+.effect-1 .image-box,
+.cart-more {
     display: flex;
     justify-content: center;
 }
@@ -141,8 +153,219 @@ aside {
     padding-bottom: 1rem;
 }
 
-#recommend, #new, #sales, #best-selling, #classify-partner, #about, #advert {
+#recommend,
+#new,
+#sales,
+#best-selling,
+#classify-partner,
+#about,
+#advert {
     border-bottom: hsl(0, 0%, 80%) dashed 1px;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
-} 
+}
+
+/* 购物车 */
+.cart-table h2 {
+    margin: 1rem 0;
+}
+
+.cart-table table {
+    font-size: 1.2rem;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0px;
+    color: hsl(0, 0%, 0%);
+}
+
+.cart-table tr,
+.cart-table td {
+    border: 1px solid hsl(85, 55%, 50%);
+}
+
+.cart-table td h3 {
+    font-size: 1.2rem;
+    color: hsl(0, 0%, 0%);
+}
+
+.cart-table img {
+    width: 60px;
+    height: 60px;
+}
+
+.cart-table td:first-child {
+    text-align: center;
+}
+
+.cart-table td:nth-child(5),
+.cart-table td:nth-child(4),
+.cart-table td:nth-child(3) {
+    text-align: right;
+    padding-right: 5px;
+}
+
+.cart-table tr:last-child a {
+    color: hsl(0, 20%, 30%);
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.cart-table tr:last-child a:hover {
+    color: hsl(0, 0%, 100%);
+}
+
+.cart-table tr:first-child,
+.cart-table tr:last-child {
+    background-color: hsl(20, 30%, 50%);
+    line-height: 40px;
+    text-align: center;
+    color: hsl(0, 0, 100%);
+}
+
+
+/* 文本 */
+h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: hsl(20, 50%, 30%);
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+    color: hsl(20, 50%, 30%);
+}
+
+.recommend-book h3 {
+    font-weight: bolder;
+}
+
+p,
+a,
+span {
+    font-size: 1rem;
+}
+
+p {
+    text-indent: 2rem;
+    text-align: justify;
+}
+
+ul {
+    list-style-type: none;
+}
+
+mark {
+    background-color: hsl(20, 30%, 50%);
+    color: hsl(0, 0%, 100%);
+}
+
+/* 背景 */
+header {
+    height: 150px;
+    background-image: url("images/header.png");
+    position: relative;
+}
+
+#nav {
+    background-image: url("images/navbg.jpg");
+}
+
+/* 栏目标题图标 */
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.woff');
+    src: url('../fonts/fontawesome-webfont.eot'), url('../fonts/fontawesome-webfont.woff2'), url('../fonts/fontawesome-webfont.ttf'), url('../fonts/fontawesome-webfont.svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon"] {
+    font-family: FontAwesome;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    float: left;
+    margin-right: 0.5rem;
+    font-weight: normal;
+    color: hsl(20, 50%, 30%);
+}
+
+.icon-book:before {
+    content: "\f02d";
+}
+
+.icon-new:before {
+    content: "\f044";
+}
+
+.icon-classify:before {
+    content: "\f022";
+}
+
+.icon-sale:before {
+    content: "\f295";
+}
+
+.icon-sell:before {
+    content: "\f073";
+}
+
+.icon-partner:before {
+    content: "\f2b5";
+}
+
+.icon-about:before {
+    content: "\f143";
+}
+
+.icon-contact:before {
+    content: "\f199";
+}
+
+.icon-cart:before {
+    content: "\f07a";
+}
+
+.title {
+    border-bottom: hsl(85, 55%, 50%) solid 1px;
+    padding-bottom: 1px;
+    margin-bottom: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 其他 */
+#logo {
+    position: absolute;
+    top: 30px;
+    left: 75px;
+}
+
+logo a {
+    font-size: 1.2rem;
+    counter-reset: hsl(20, 50%, 30%);
+    text-decoration: none;
+}
+
+logo a h1 {
+    font-weight: normal;
+}
+
+#advert img {
+    min-width: 260px;
+}
+
+#about img {
+    max-width: 120px;
+    margin-bottom: 1rem;
+}
+
+#about .content {
+    margin-top: 1rem;
+}
