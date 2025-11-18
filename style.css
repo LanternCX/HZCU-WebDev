@@ -165,63 +165,7 @@ aside {
     padding-bottom: 1rem;
 }
 
-/* 购物车 */
-.cart-table h2 {
-    margin: 1rem 0;
-}
 
-.cart-table table {
-    font-size: 1.2rem;
-    width: 100%;
-    border-collapse: collapse;
-    margin: 10px 0px;
-    color: hsl(0, 0%, 0%);
-}
-
-.cart-table tr,
-.cart-table td {
-    border: 1px solid hsl(85, 55%, 50%);
-}
-
-.cart-table td h3 {
-    font-size: 1.2rem;
-    color: hsl(0, 0%, 0%);
-}
-
-.cart-table img {
-    width: 60px;
-    height: 60px;
-}
-
-.cart-table td:first-child {
-    text-align: center;
-}
-
-.cart-table td:nth-child(5),
-.cart-table td:nth-child(4),
-.cart-table td:nth-child(3) {
-    text-align: right;
-    padding-right: 5px;
-}
-
-.cart-table tr:last-child a {
-    color: hsl(0, 20%, 30%);
-    font-size: 1.1rem;
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-.cart-table tr:last-child a:hover {
-    color: hsl(0, 0%, 100%);
-}
-
-.cart-table tr:first-child,
-.cart-table tr:last-child {
-    background-color: hsl(20, 30%, 50%);
-    line-height: 40px;
-    text-align: center;
-    color: hsl(0, 0, 100%);
-}
 
 
 /* 文本 */
@@ -266,12 +210,25 @@ mark {
 
 /* 背景 */
 header {
-    height: 150px;
+    /* 原书的固定高度会导致布局错位 */
+    /* height: 150px; */
+    height: auto;
     background-image: url("images/header.png");
     position: relative;
 }
 
+#search {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    height: 80px;
+}
+
 #nav {
+    background-image: url("images/navbg.jpg");
+}
+
+#footer-wrapper {
     background-image: url("images/navbg.jpg");
 }
 
@@ -279,8 +236,8 @@ header {
 
 @font-face {
     font-family: 'FontAwesome';
-    src: url('../fonts/fontawesome-webfont.woff');
-    src: url('../fonts/fontawesome-webfont.eot'), url('../fonts/fontawesome-webfont.woff2'), url('../fonts/fontawesome-webfont.ttf'), url('../fonts/fontawesome-webfont.svg');
+    src: url('fonts/fontawesome-webfont.woff');
+    src: url('fonts/fontawesome-webfont.eot'), url('fonts/fontawesome-webfont.woff2'), url('fonts/fontawesome-webfont.ttf'), url('../fonts/fontawesome-webfont.svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -304,16 +261,16 @@ header {
     content: "\f044";
 }
 
-.icon-classify:before {
-    content: "\f022";
-}
-
 .icon-sale:before {
     content: "\f295";
 }
 
 .icon-sell:before {
     content: "\f073";
+}
+
+.icon-classify:before {
+    content: "\f022";
 }
 
 .icon-partner:before {
@@ -326,18 +283,6 @@ header {
 
 .icon-contact:before {
     content: "\f199";
-}
-
-.icon-cart:before {
-    content: "\f07a";
-}
-
-.title {
-    border-bottom: hsl(85, 55%, 50%) solid 1px;
-    padding-bottom: 1px;
-    margin-bottom: 0.6rem;
-    display: flex;
-    justify-content: space-between;
 }
 
 /* 其他 */
