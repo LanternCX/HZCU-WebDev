@@ -21,21 +21,24 @@
 </head>
 
 <body>
-    <!-- 引入外部脚本文件 -->
+    <!-- 引入外部脚本文件 -->`
     <script src="script.js"></script>
     <!-- 页眉 -->
     <header class="container">
-        <a href="index.html">
-            <div id="logo"></div>
-            <h1>叮叮书店</h1>
-        </a>
+        <div id="logo">
+            <a href="index.html">
+                <h1>叮叮书店</h1>
+            </a>
+        </div>
         <div id="search">
             <form action="index.html" method="get">
                 <input type="search" placeholder="站内搜索"><input type="submit" value="搜索">
             </form>
         </div>
-        <!-- 导航菜单 -->
-        <div id="nav">
+    </header>
+    <!-- 导航菜单 -->
+    <div id="nav">
+        <nav class="container">
             <ul>
                 <li><a href="index.html">首页</a></li>
                 <li><a href="category.html">书籍分类</a></li>
@@ -47,8 +50,8 @@
                 <span class="icon-cart"></span>
                 <a href="cart.html">购物车</a>
             </div>
-        </div>
-    </header>
+        </nav>
+    </div>
 
     <!-- 内容 -->
     <div id="content-wrapper" class="container">
@@ -151,9 +154,9 @@
                                     了针对各种屏幕大小设计和开发现代网站的各种技术。《响应式 Web设计:<mark>HTML5
                                     </mark>和CSS3 实战》适合各个次的web开发和设计人员阅读。
                                 </p>
-                                <div class="cart-more"><a class="cart" href="cart.html">加入购物车</a><a class="more"
-                                        href="details.html">详细内容</a></div>
                             </div>
+                            <div class="cart-more"><a class="cart" href="cart.html">加入购物车</a><a class="more"
+                                    href="details.html">详细内容</a></div>
                         </div>
                     </section>
                 </div>
