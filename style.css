@@ -312,36 +312,41 @@ header {
 }
 
 #cart {
-    position: absolute;
-    right: 0px;
-    top: 10px;
-    background-color: #F3F3F3;
-    line-height: 40px;
-    min-width: 120px;
-    display: none;
-    justify-content: center;
+	position: absolute;
+	right: 0px;
+	top: 10px;
+	background-color:
+		#F3F3F3;
+	line-height: 40px;
+	min-width: 120px;
+	display: none;
+	justify-content:
+		center;
 }
 
 .icon-cart:before {
     content: "\F07A";
 }
 
+/*屏幕大于560px 宽度时显示购物车*/
 @media screen and (min-width: 560px) {
-    #cart {
-        display: felx;
-    }
+	#cart {
+		display: flex;
+	}
 }
 
+/*购物车超链接样式*/
 #cart a,
 .icon-cart {
-    color: hsl(20, 50%, 30%);
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: normal;
+	color: hsl(20, 50%, 30%);
+	text-decoration: none;
+	font-size:
+		1.2rem;
+	font-weight: normal;
 }
 
 #cart a:hover {
-    color: hsl(20, 30%, 50%);
+	color: hsl(20, 30%, 50%);
 }
 
 header #logo a:link {
@@ -601,4 +606,63 @@ ellipsis为多的部分显示省略号*/
 
 #best-selling li:hover .curr {
     display: block;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    min-width: 160px;
+}
+
+nav ul a {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: normal;
+    transition: background 0.5s linear;
+}
+
+nav ul a:hover {
+    background-color: hsl(20, 50%, 30%);
+}
+
+@media screen and (min-width: 414px) {
+    nav ul {
+        justify-content: flex-start;
+    }
+}
+
+/* nav ul {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    width: 160px;
+} */
+
+#nav nav ul li {
+    position: relative;
+}
+
+#nav nav ul ul li {
+    background-image: url("images/navbg.jpg");
+}
+
+#nav nav ul ul {
+    visibility: hidden;
+    position: absolute;
+    left: -1px;
+    background-image: url("images/navbg.jpg");
+}
+
+#nav nav ul li:hover ul {
+    visibility: visible;
+    z-index: 100;
 }
