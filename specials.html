@@ -7,22 +7,22 @@
     <!-- 网页使用 UTF-8 编码 -->
     <meta charset="UTF-8">
     <!-- 网页标题 -->
-    <title>联系我们</title>
+    <title>特刊降价</title>
     <!-- 让网页宽度与设备宽度保持一致并设置初始缩放比例为 0 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 提供给搜索引擎的搜索关键字 -->
-    <meta name="keywords" content="联系我们, 叮叮书店">
+    <meta name="keywords" content="特刊降价, 促销, 叮叮书店">
     <!-- 提供给搜素引擎的网页描述 -->
-    <meta name="description" content="叮叮书店联系我们页面。">
+    <meta name="description" content="叮叮书店特刊降价页面。">
     <!-- 搜索引擎选项,允许搜索引擎索引并允许搜索引擎对页面上的链接递归索引 -->
     <meta name="robots" content="index, follow">
     <!-- 引入外部 CSS 文件 -->
     <link rel="stylesheet" href="style.css">
     <style>
-        nav ul li:nth-child(4){
+        nav ul li:nth-child(3){
             background-color: hsl(20, 50%, 30%);
         }
-        footer ul li:last-child{
+        footer ul li:first-child{
             background-color: hsl(20, 50%, 30%);
         }
     </style>
@@ -72,34 +72,41 @@
         <!--左边内容区-->
         <main>
             <!-- 面包屑导航 -->
-            <section class="crumb-nav">您现在的位置：<a href="index.html">首页</a>&gt;&gt;<span>联系我们</span></section>
+            <section class="crumb-nav">您现在的位置：<a href="index.html">首页</a>&gt;&gt;<span>特刊降价</span></section>
             
-            <!-- 联系我们内容 -->
-            <section class="contacts">
-                <h2>联系我们</h2>
-                <p>感谢您的来信。请在下面表格中填写您的相关信息，我们将尽快与您联系。</p>
-                <form method="post" action="contact.html">
-                    <div class="form-row">
-                        <label for="name">姓名：</label>
-                        <input type="text" id="name" name="name" required>
+            <!-- 特刊降价内容 -->
+            <section>
+                <h2>特刊降价</h2>
+                <section class="specials">
+                    <a href="details.html"><img src="images/selling1.jpg" alt="HTML5 和 CSS3 实例教程"></a>
+                    <div>
+                        <h3>《HTML5 和 CSS3 实例教程》</h3>
+                        <p>作者：霍根（Brian P. Hogan）(作者)，柳婼（合著者），李杰（译者），刘晓娅（译者），朱曦（译者）</p>
+                        <p>出版社：人民邮电出版社；第1版（2012年1月1日）</p>
+                        <p>《HTML5 和 CSS3 实例教程》共分 3 部分，集中讨论了 HTML5 和 CSS3 规范及其技术应用方法。《HTML5 和 CSS3 实例教程》适合所有使用 HTML 和 CSS 的 Web 开发人员学习参考。</p>
+                        <p><strong>现价：¥43.50</strong>&nbsp;&nbsp;<del>原价</del>¥52.00</p>
                     </div>
-                    <div class="form-row">
-                        <label for="email">邮箱：</label>
-                        <input type="email" id="email" name="email" required>
+                </section>
+                <section class="specials">
+                    <a href="details.html"><img src="images/selling2.jpg" alt="JavaScript 权威指南"></a>
+                    <div>
+                        <h3>《JavaScript 权威指南》</h3>
+                        <p>作者：（美）弗拉内根，李强（译者）</p>
+                        <p>出版社：机械工业出版社；第1版（2007年1月1日）</p>
+                        <p>总体上分为"基础知识点介绍"和"参考指南"两部分，这是本书的一大特色。</p>
+                        <p><strong>现价：¥43.50</strong>&nbsp;&nbsp;<del>原价</del>¥52.00</p>
                     </div>
-                    <div class="form-row">
-                        <label for="subject">主题：</label>
-                        <input type="text" id="subject" name="subject" required>
+                </section>
+                <section class="specials">
+                    <a href="details.html"><img src="images/selling3.jpg" alt="HTML5 权威指南"></a>
+                    <div>
+                        <h3>《HTML5 权威指南》</h3>
+                        <p>作者：霍根（Brian P. Hogan）(作者)，柳婼（合著者），李杰（译者），刘晓娅（译者），朱曦（译者）</p>
+                        <p>出版社：人民邮电出版社；第1版（2012年1月1日）</p>
+                        <p>本书是系统学习网页设计和移动设计的参考图书。</p>
+                        <p><strong>现价：¥43.50</strong>&nbsp;&nbsp;<del>原价</del>¥52.00</p>
                     </div>
-                    <div class="form-row">
-                        <label for="message">内容：</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <div class="form-row-button">
-                        <input class="send" type="submit" value="发送">
-                        <input class="reset" type="reset" value="重置">
-                    </div>
-                </form>
+                </section>
             </section>
         </main>
         <aside>

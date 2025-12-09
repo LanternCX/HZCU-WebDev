@@ -7,22 +7,22 @@
     <!-- 网页使用 UTF-8 编码 -->
     <meta charset="UTF-8">
     <!-- 网页标题 -->
-    <title>联系我们</title>
+    <title>关于我们</title>
     <!-- 让网页宽度与设备宽度保持一致并设置初始缩放比例为 0 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 提供给搜索引擎的搜索关键字 -->
-    <meta name="keywords" content="联系我们, 叮叮书店">
+    <meta name="keywords" content="关于我们, 叮叮书店">
     <!-- 提供给搜素引擎的网页描述 -->
-    <meta name="description" content="叮叮书店联系我们页面。">
+    <meta name="description" content="叮叮书店关于我们页面。">
     <!-- 搜索引擎选项,允许搜索引擎索引并允许搜索引擎对页面上的链接递归索引 -->
     <meta name="robots" content="index, follow">
     <!-- 引入外部 CSS 文件 -->
     <link rel="stylesheet" href="style.css">
     <style>
-        nav ul li:nth-child(4){
+        nav ul li:nth-child(5){
             background-color: hsl(20, 50%, 30%);
         }
-        footer ul li:last-child{
+        footer ul li:nth-child(2){
             background-color: hsl(20, 50%, 30%);
         }
     </style>
@@ -72,34 +72,20 @@
         <!--左边内容区-->
         <main>
             <!-- 面包屑导航 -->
-            <section class="crumb-nav">您现在的位置：<a href="index.html">首页</a>&gt;&gt;<span>联系我们</span></section>
+            <section class="crumb-nav">您现在的位置：<a href="index.html">首页</a>&gt;&gt;<span>关于我们</span></section>
             
-            <!-- 联系我们内容 -->
-            <section class="contacts">
-                <h2>联系我们</h2>
-                <p>感谢您的来信。请在下面表格中填写您的相关信息，我们将尽快与您联系。</p>
-                <form method="post" action="contact.html">
-                    <div class="form-row">
-                        <label for="name">姓名：</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-row">
-                        <label for="email">邮箱：</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-row">
-                        <label for="subject">主题：</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-row">
-                        <label for="message">内容：</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <div class="form-row-button">
-                        <input class="send" type="submit" value="发送">
-                        <input class="reset" type="reset" value="重置">
-                    </div>
-                </form>
+            <!-- 关于我们内容 -->
+            <section id="video">
+                <h2>关于我们</h2>
+                <p>叮叮书店成立于1980年6月，是由教育部主管、清华大学主办的综合出版单位，植根于"叮叮"这座久负盛名的高等学府，秉承清华人"自强不息，厚德载物"的人文精神。</p>
+                <div class="video">
+                    <video controls="controls" autoplay="autoplay">
+                        <source src="images/book-store.mp4" type="video/mp4">
+                        <source src="images/book-store.webm" type="video/webm">
+                        <source src="images/book-store.ogv" type="video/ogg">
+                        <p>你的浏览器不支持 video 元素。</p>
+                    </video>
+                </div>
             </section>
         </main>
         <aside>
