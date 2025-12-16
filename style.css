@@ -311,6 +311,25 @@ header {
     position: relative;
 }
 
+#date {
+    position: absolute;
+    top: 20px;
+    right: 260px;
+    color: hsl(0, 0%, 100%);
+    display: block;
+    white-space: nowrap;
+    padding-right: 20px;
+}
+
+#time {
+    position: absolute;
+    top: 20px;
+    right: 140px;
+    color: hsl(0, 0%, 100%);
+    display: block;
+    white-space: nowrap;
+}
+
 #cart {
 	position: absolute;
 	right: 0px;
