@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>乘法口诀表</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        body {
+            font-family: "微软雅黑", Arial, sans-serif;
+            background: #f4f5f8;
+            color: #222;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        main {
+            width: min(780px, 100%);
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            border: 1px solid #d1d5db;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            margin: 0 0 1rem;
+            text-align: center;
+            font-size: 1.6rem;
+            letter-spacing: 0.3rem;
+            color: #0e385f;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 0.5rem;
+        }
+        .cell {
+            padding: 0.65rem;
+            border-radius: 6px;
+            background: #f9fafc;
+            border: 1px solid #cfd4dd;
+            font-size: 0.95rem;
+            text-align: center;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1>乘法口诀表</h1>
+    <div class="grid" id="table"></div>
+</main>
+<script>
+    const table = document.getElementById("table");
+    for (let line = 1; line <= 9; line++) {
+        for (let factor = 1; factor <= line; factor++) {
+            const cell = document.createElement("div");
+            cell.className = "cell";
+            cell.textContent = `${factor}×${line}=${factor * line}`;
+            table.appendChild(cell);
+        }
+    }
+</script>
+</body>
+</html>
