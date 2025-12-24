@@ -42,6 +42,59 @@
     background-color: #717171;
 }
 
+/* 图书首页广告轮播 */
+#adv {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#adv dl,
+#adv dd {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#adv dt {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    display: flex;
+    gap: 5px;
+}
+
+#adv dd {
+    overflow: hidden;
+}
+
+#adv dd img {
+    width: 100%;
+    display: block;
+}
+
+#adv dt a {
+    width: 28px;
+    height: 28px;
+    border-radius: 15px;
+    background-color: hsl(20, 50%, 30%);
+    color: hsl(0, 8%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+#adv dt a:hover {
+    background-color: hsl(20, 40%, 40%);
+}
+
 /* 通用样式 */
 * {
     padding: 0px;
